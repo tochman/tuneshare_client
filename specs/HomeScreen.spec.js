@@ -42,7 +42,10 @@ describe('<HomeScreen />', () => {
   describe('<FlatList /> ', () => {
     let screen
     beforeEach(() => {
-      screen = render(<Provider store={store}><HomeScreen /></Provider>)
+      screen = render(
+        <Provider store={store}>
+          <HomeScreen />
+        </Provider>)
     });
     it('calls on useSelector', () => {
       expect(useSelectorMock).toHaveBeenCalled()
